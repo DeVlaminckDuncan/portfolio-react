@@ -1,0 +1,68 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+  },
+  "plugins": [
+    {
+      "name": "typescript-styled-plugin",
+      "lint": {
+        "validProperties": [
+          "elevation",
+          "shadow-opacity",
+          "shadow-radius",
+          "shadow-color",
+          "shadow-offset"
+        ]
+      }
+    }
+  ],
+  "baseUrl": "./src",
+  "paths": {
+    "@assets": [
+      "../assets"
+    ],
+    "@assets/*": [
+      "../assets/*"
+    ],
+    "@common": [
+      "./common"
+    ],
+    "@common/*": [
+      "./common/*"
+    ],
+    "@global": [
+      "./global"
+    ],
+    "@global/*": [
+      "./global/*"
+    ],
+    "@src": [
+      "."
+    ],
+    "@src/*": [
+      "./*"
+    ]
+  },
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+  ]
+}

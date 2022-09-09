@@ -1,8 +1,8 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-    title: `new`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Duncan De Vlaminck`,
+    siteUrl: `https://www.duncandevlaminck.be`,
   },
-  plugins: ["gatsby-plugin-styled-components"]
+  plugins: ["gatsby-plugin-styled-components"],
 };

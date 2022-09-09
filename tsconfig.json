@@ -1,12 +1,9 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "target": "ES2022",
+    "lib": ["DOM", "ESNext"],
     "jsx": "react",
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "skipLibCheck": true,
@@ -19,50 +16,30 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
+    "importHelpers": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@assets": ["./assets"],
+      "@assets/*": ["./assets/*"],
+      "@common": ["./common"],
+      "@common/*": ["./common/*"],
+      "@config": ["./config"],
+      "@config/*": ["./config/*"],
+      "@global": ["./global"],
+      "@global/*": ["./global/*"],
+      "@modules": ["./modules"],
+      "@modules/*": ["./modules/*"],
+      "@src": ["."],
+      "@src/*": ["./*"]
+    },
   },
   "plugins": [
     {
       "name": "typescript-styled-plugin",
       "lint": {
-        "validProperties": [
-          "elevation",
-          "shadow-opacity",
-          "shadow-radius",
-          "shadow-color",
-          "shadow-offset"
-        ]
+        "validProperties": ["elevation", "shadow-opacity", "shadow-radius", "shadow-color", "shadow-offset"]
       }
     }
   ],
-  "baseUrl": "./src",
-  "paths": {
-    "@assets": [
-      "../assets"
-    ],
-    "@assets/*": [
-      "../assets/*"
-    ],
-    "@common": [
-      "./common"
-    ],
-    "@common/*": [
-      "./common/*"
-    ],
-    "@global": [
-      "./global"
-    ],
-    "@global/*": [
-      "./global/*"
-    ],
-    "@src": [
-      "."
-    ],
-    "@src/*": [
-      "./*"
-    ]
-  },
-  "include": [
-    "./src/**/*.tsx",
-    "./src/**/*.ts",
-  ]
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
 }

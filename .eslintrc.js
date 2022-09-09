@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
+    node: true,
     es2021: true,
   },
   extends: [
@@ -19,7 +20,7 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: path.resolve(__dirname, './tsconfig.json'),
   },
   plugins: [
     'react',
@@ -60,7 +61,9 @@ module.exports = {
         // Aliased imports.
         "^@assets(/)?",
         "^@common(/)?",
+        "^@config(/)?",
         "^@global(/)?",
+        "^@modules(/)?",
         // Relative imports.
         // Anything that starts with a dot.
         "^\\.",

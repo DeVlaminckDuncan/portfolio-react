@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-
-const Container = styled.main`
-  font-family: Roboto, sans-serif, serif;
-  padding: 96px;
-`;
+import Container from '../common/container';
 
 const H1 = styled.h1`
   margin-top: 0;
